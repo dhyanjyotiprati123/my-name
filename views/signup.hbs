@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+    {{>navbar}}
+    <div class="containe-fluid signup-div">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto inner-signupDiv">
+                <div class="row">
+                    <div class="col-md-6 col-11 img-div ">
+                        <img src="images/login.png" alt="">
+                    </div>
+                    <div class="col-md-6 mx-auto form-div">
+                       <form action="/signup" method="POST">
+                       <div class="row">
+                        <div class="col-md-6">
+                             <div class="mb-1">
+                               <label for="firstName" class="form-label">FName</label>
+                               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="FName" name="firstname" value="" />
+                             </div>
+                             <div class="mb-1">
+                               <label for="email" class="form-label">Email</label>
+                               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email" name="email" value="" />
+                             </div>
+                             <div class="mb-1">
+                               <label for="password" class="form-label">Password</label>
+                               <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="password" name="password" value="" />
+                             </div>
+                         </div>
+                         <div class="col-md-6">
+                              <div class="mb-1">
+                               <label for="lastname" class="form-label">LName</label>
+                               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="LName" name="lastname" value="" /> 
+                             </div>
+                             <div class="mb-1">
+                               <label for="phone" class="form-label">Phone.no</label>
+                               <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Phone.no" name="phone" value="" />
+                             </div>
+                             <div class="mb-1">
+                               <label for="cpassword" class="form-label">Confirm Password</label>
+                               <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="confirm password" name="Confirmpassword" value="" />
+                             </div>
+                       </div>
+                       
+                       </div>
+                       <input type="submit" class=" btn btn-outline-primary mt-3 mx-3" value="SignUp" />
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
