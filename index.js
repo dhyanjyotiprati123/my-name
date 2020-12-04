@@ -40,6 +40,11 @@ app.get("/secret",auth,(req,res)=>{
 
 app.get("/logout", auth , async(req, res)=>{
     try{
+
+       req.User.tokens=req.User.tokens.filter((currentElement)=>{
+           return currentElement.token !== req.token;
+       })
+
         res.clearCookie("jwt");
         await req.User.save();
         res.render("login");
