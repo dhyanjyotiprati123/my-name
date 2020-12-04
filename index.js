@@ -40,10 +40,14 @@ app.get("/secret",auth,(req,res)=>{
 
 app.get("/logout", auth , async(req, res)=>{
     try{
-
+    //    logout from single device
        req.User.tokens=req.User.tokens.filter((currentElement)=>{
            return currentElement.token !== req.token;
        })
+
+    //    logout from multiple device
+      
+        // req.User.tokens=[];
 
         res.clearCookie("jwt");
         await req.User.save();
