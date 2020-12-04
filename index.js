@@ -38,6 +38,17 @@ app.get("/secret",auth,(req,res)=>{
     res.render("secret");
 })
 
+app.get("/logout", auth , async(req, res)=>{
+    try{
+        res.clearCookie("jwt");
+        await req.User.save();
+        res.render("login");
+        console.log("logout successfully");
+    }catch(err){
+        res.status(500).send(err)
+    }
+})
+
 app.post("/signup",async(req,res)=>{
     try{
        const password=req.body.password;
